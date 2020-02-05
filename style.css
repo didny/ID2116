@@ -8,7 +8,9 @@ body {
 
 /* Style the header */
 .header {
-  background-color: #f1f1f1;
+ /* background-color: #f1f1f1;*/
+  background: #5885ff;
+    color: #fff;
   padding: 20px;
   text-align: center;
 }
@@ -85,11 +87,21 @@ dt {
 	display: table-cell;
 	padding: 3px 10px;
 }
-.divTableHeading {
-	background-color: #EEE;
-	display: table-header-group;
-	font-weight: bold;
+
+.column-ID {
+	/*background-color: #EEE;*/
+    font-weight: bold;
+    width:8%;
+    text-align:center;
+    vertical-align: middle;
+    
 }
+
+.column-Description {   
+    width:40%;
+   
+}
+
 .divTableFoot {
 	background-color: #EEE;
 	display: table-footer-group;
@@ -249,8 +261,8 @@ h6 {
     color: inherit;
     font-weight: 600;
     line-height: 1.25;
-    margin-bottom: 16px;
-    margin-top: 1.5em
+    margin-bottom: 0.2em;
+    margin-top: 0.5em;
 }
 
 h1 {

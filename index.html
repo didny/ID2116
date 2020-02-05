@@ -26,7 +26,7 @@
 
     <div class="topnav">
         <a href="#">ID2116</a>
-        <a href="#">About</a>
+        <a href="#Lectures">Lectures</a>
         <a href="#teamlist">Teams</a>
     </div>
 
@@ -39,12 +39,12 @@
     <!--Schedule-->
     <div class="row">
         <div class="column">
-            <h1>Schedule:</h1>
+            <h1 id="Lectures">Schedule:</h1>
             <div class="divTable" style="border: 1px solid #000;">
 
                 <div class="divTableBody">
                     <div class="divTableRow">
-                        <div class="divTableCell">Week1</div>
+                        <div class="divTableCell column-ID">Week1</div>
                         <div class="divTableCell">
                             <a href="https://paper.dropbox.com/doc/ID2116-Week01-Introduction-r54DqbUFK29TsLYGjmizB">ID2116:
                                 Week01* Introduction</a><br>
@@ -53,11 +53,11 @@
                                 Week01* micro:bit Introduction</a><br>
 
                         </div>
-                        <div class="divTableCell">Week7</div>
+                        <div class="divTableCell column-ID">Week7</div>
                         <div class="divTableCell">ID2116:Week07*Data+Network </div>
                     </div>
                     <div class="divTableRow">
-                        <div class="divTableCell">Week2</div>
+                        <div class="divTableCell column-ID">Week2</div>
                         <div class="divTableCell">
                             <a
                                 href="https://paper.dropbox.com/doc/AY2020_ID2116-Wk02-Introduction-to-HTMLCSS-XaVBIkhWQ58Zs4TYW6NaD">ID2116:
@@ -67,11 +67,11 @@
                                 Week02* micro:bit hardware
                                 Introduction</a><br>
                         </div>
-                        <div class="divTableCell">Week8</div>
+                        <div class="divTableCell column-ID">Week8</div>
                         <div class="divTableCell">ID2116:Week08*Data+API </div>
                     </div>
                     <div class="divTableRow">
-                        <div class="divTableCell">Week3</div>
+                        <div class="divTableCell column-ID">Week3</div>
                         <div class="divTableCell">
                             <a
                                 href="https://paper.dropbox.com/doc/AY2020-ID2116-Wk03-CSSDOMJavaScript--AtpV2Vpbni8JNiOo_08D2EV7Ag-RddHojGE9UXxaKWgNP8jA">ID2116:
@@ -80,33 +80,33 @@
                                 href="https://paper.dropbox.com/doc/AY2020-ID2116-Wk03-2-Introduction-to-p5js-FVqunzRZ2A8rJRitMrbXc">ID2116:
                                 Week03* Introduction to p5.js</a><br>
                         </div>
-                        <div class="divTableCell">Week9</div>
+                        <div class="divTableCell column-ID">Week9</div>
                         <div class="divTableCell">ID2116:Week09*Data+Algorithm </div>
                     </div>
                     <div class="divTableRow">
-                        <div class="divTableCell">Week4</div>
+                        <div class="divTableCell column-ID">Week4</div>
                         <div class="divTableCell">ID2116:Week04* ObjectOriented Programming/State Transition<br>
                             ID2116:Week04* Interface micro:bit with p5.js
                         </div>
-                        <div class="divTableCell">Week10</div>
+                        <div class="divTableCell column-ID ">Week10</div>
                         <div class="divTableCell">ID2116:Week010*MachineLearning </div>
                     </div>
                     <div class="divTableRow">
-                        <div class="divTableCell">Week5</div>
+                        <div class="divTableCell column-ID">Week5</div>
                         <div class="divTableCell">ID2116:Week05*: MiniProject01 Consultation</div>
-                        <div class="divTableCell">Week11</div>
+                        <div class="divTableCell column-ID">Week11</div>
                         <div class="divTableCell">MiniProject02 Consultation / Preparation</div>
                     </div>
                     <div class="divTableRow">
-                        <div class="divTableCell">Week6</div>
+                        <div class="divTableCell column-ID">Week6</div>
                         <div class="divTableCell">MiniProject01 Presentation</div>
-                        <div class="divTableCell">Week12</div>
+                        <div class="divTableCell column-ID">Week12</div>
                         <div class="divTableCell">Good Friday</div>
                     </div>
                     <div class="divTableRow">
-                        <div class="divTableCell">Recess Week</div>
+                        <div class="divTableCell column-ID">Recess Week</div>
                         <div class="divTableCell">&nbsp;</div>
-                        <div class="divTableCell">Week13</div>
+                        <div class="divTableCell column-ID">Week13</div>
                         <div class="divTableCell">MiniProject02 Presentation</div>
                     </div>
                 </div>
@@ -154,11 +154,11 @@
         tbody.className = "divTableBody";
         let header = tbody.appendChild(document.createElement("div"));
         header.className = "divTableRow";
-        for (let wk = 0; wk < 7; wk++) {
+        for (let wk = 0; wk < 6; wk++) {
             let cell = document.createElement("div");
             cell.classList.add("divTableCell");
             if (wk === 0) cell.append(document.createTextNode("TeamID"));
-            else cell.append(document.createTextNode("Week" + wk));
+            else cell.append(document.createTextNode("Week" + (wk+1)));
             header.appendChild(cell);
         }
         tbody.appendChild(header);
@@ -193,7 +193,7 @@
             node.appendChild(teamIDCell);
             node.appendChild(week1Cell);
             
-            for(let i =0; i < 5;i++){
+            for(let i =0; i < 4;i++){
                 let emptyCell = document.createElement("div");
                 emptyCell.classList.add("divTableCell");
                 emptyCell.append(document.createTextNode(" "));
