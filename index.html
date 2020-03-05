@@ -130,27 +130,11 @@
         </div>
     </div>
 
-    <script type="text/javascript" src="scripts/progress.json"> 
+    <script type="text/javascript" src="scripts/progress.js"> 
     </script>
     <script type="text/javascript">
-         //console.log(progress);
-        let newlist = [];
-        for (let i in progress) {
-            let node = {};
-            let teamID = progress[i]["Team ID"];
-            
-            if(newlist[teamID] == null){ 
-               
-                newlist[teamID] = {TeamID:progress[i]["Team ID"],
-                                GitHub:progress[i]["GitHub Pages"],
-                            ProfilePages:[progress[i]["Profile Page"]]};
-            }else{
-                
-                newlist[teamID]["ProfilePages"].push(progress[i]["Profile Page"]);
-            }
-         
-        }
-        console.log(newlist)
+
+
 
         let progressTab = document.getElementById("progress");
         let plist = progressTab.appendChild(document.createElement("div"));
@@ -168,7 +152,7 @@
         }
         tbody.appendChild(header);
 
-        for (let val of newlist) {
+        for (let val of progress) {
             //console.log(val);
             if(val == null) continue;
 
